@@ -14,6 +14,7 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
+apply plugin: 'maven'
 
 group = 'com.jessi'
 version = '0.0.1-SNAPSHOT'
@@ -28,3 +29,14 @@ dependencies {
 	implementation('org.springframework.boot:spring-boot-starter')
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
+
+task createPom {
+    description "Generates a pom.xml in the project root directory; useful e.g. for IDEs which can read POM but don't directly support Gradle."
+    doLast {
+        pom {
+        }.writeTo("pom.xml")
+    }
+}
+
+compileJava.dependsOn createPom
+
