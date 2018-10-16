@@ -35,6 +35,23 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.github.jasminb</groupId>
+            <artifactId>jsonapi-converter</artifactId>
+            <version>0.9</version>
+        </dependency>
+        <!--<dependency>
+            <groupId>io.katharsis</groupId>
+            <artifactId>katharsis-spring</artifactId>
+            <version>3.0.2</version>
+        </dependency> -->
+        
 	</dependencies>
 
 	<build>
